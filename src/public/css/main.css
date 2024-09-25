@@ -1,0 +1,28 @@
+:root {
+  --primary-color: #d31a1a;
+  --primary-color-darker: #bf0908;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 50px 15px;
+}
+
+figure.cover-figure {
+  height: 190px;
+}
+
+img.cover-image {
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  border-top: 5px solid var(--primary-color);
+}

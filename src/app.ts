@@ -2,11 +2,14 @@ import boom from 'boom'
 import cors from 'cors'
 import express, { Application, json, urlencoded } from 'express'
 import fs from 'fs'
+import { join } from 'path'
 import helmet from 'helmet'
 import morgan from 'morgan'
 
 import EnvManager from './config/EnvManager'
 import errorHandler from './middlewares/errorHandler'
+import v1 from './routes/v1'
+import views from './routes/views'
 
 // App
 const app: Application = express()
@@ -24,6 +27,13 @@ app.use(urlencoded({ extended: true }))
 app.use(helmet({ crossOriginResourcePolicy: false }))
 app.use(morgan('dev'))
 
+// Static files
+app.use('/static', express.static(join(__dirname, 'public')))
+
+// View engine setup
+app.set('views', join(__dirname, 'views'))
+app.set('view engine', 'pug')
+
 // Security
 const whitelist: string[] = ['http://localhost:5173', 'http://localhost:3000']
 const options: cors.CorsOptions = {
@@ -39,7 +49,7 @@ const options: cors.CorsOptions = {
 app.use(cors(options))
 
 // Redirect
-app.get('/', (req, res) => {
+app.get('/info', (req, res) => {
   res.json({
     message: 'Welcome to my API',
     name: app.get('pkg').name,
@@ -54,6 +64,8 @@ app.get('/', (req, res) => {
 })
 
 // API-REST V1
+app.use('/v1', v1)
+app.use('/', views)
 
 // Verify router
 app.use((req, res) => {
