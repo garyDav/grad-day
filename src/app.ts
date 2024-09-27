@@ -41,6 +41,8 @@ const whitelist: string[] = [
   'https://localhost:4000',
   'http://216.238.80.194:4000',
   'https://216.238.80.194:4000',
+  'https://garydav.com',
+  'http://garydav.com',
 ]
 const options: cors.CorsOptions = {
   exposedHeaders: 'Authorization, Content-Disposition',
