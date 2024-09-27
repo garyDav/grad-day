@@ -23,6 +23,11 @@ img.cover-image {
   object-fit: cover;
 }
 
+figure.logo-usfx img {
+  width: 150px;
+  object-fit: cover;
+}
+
 .footer {
   border-top: 5px solid var(--primary-color);
 }

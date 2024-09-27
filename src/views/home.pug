@@ -9,38 +9,8 @@ block content
           .col-xs-2
             #fh5co-logo
               a(href="index.html") Juramento<strong>.</strong>
-          .col-xs-10.text-right.menu-1
-            ul
-              li.active
-                a(href="index.html") Home
-              li
-                a(href="about.html") Story
-              li.has-dropdown
-                a(href="services.html") Services
-                ul.dropdown
-                  li
-                    a(href="#") Web Design
-                  li
-                    a(href="#") eCommerce
-                  li
-                    a(href="#") Branding
-                  li
-                    a(href="#") API
-              li.has-dropdown
-                a(href="gallery.html") Gallery
-                ul.dropdown
-                  li
-                    a(href="#") HTML5
-                  li
-                    a(href="#") CSS3
-                  li
-                    a(href="#") Sass
-                  li
-                    a(href="#") jQuery
-              li
-                a(href="contact.html") Contact
 
-    header#fh5co-header.fh5co-cover(role="banner", style="background-image:url(/static/images/banner.webp);", data-stellar-background-ratio="0.5")
+    header#fh5co-header.fh5co-cover(role="banner", style="background-image:url(/static/images/banner2.webp);")
       .overlay
       .container
         .row
@@ -50,142 +20,95 @@ block content
                 h1 Gary David Guzmán Muñoz
                 h2 Mi Juramento
                 .simply-countdown.simply-countdown-one
-                p
-                  a.btn.btn-default.btn-sm(href="#") Save the date
 
     #fh5co-couple
       .container
         .row
           .col-md-8.col-md-offset-2.text-center.fh5co-heading.animate-box
             h2 ¡Hola!
-            h3 Octubre 04, 2024 Sucre.
+            h3 04 de Octubre del 2024, Sucre.
+            figure.logo-usfx
+              img(src="/static/images/logo-usfx.webp", alt="logo-usfx")
             p Te invito a mi juramento como Ingeniero en Sistemas y T.S. en Informática, espero contar con tu presencia.
-        .couple-wrap.animate-box
-          .couple-half
-            .groom
-              img(src="images/groom.jpg", alt="groom", class="img-responsive")
-            .desc-groom
-              h3 Joefrey Mahusay
-              p Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-          p.heart.text-center
-            i.icon-heart2
-          .couple-half
-            .bride
-              img(src="images/bride.jpg", alt="groom", class="img-responsive")
-            .desc-bride
-              h3 Sheila Mahusay
-              p Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 
-    #fh5co-event.fh5co-bg(style="background-image:url(images/img_bg_3.jpg);")
+    #fh5co-event.fh5co-bg(style="background-image:url(/static/images/img_bg_3.jpg);")
       .overlay
       .container
         .row
           .col-md-8.col-md-offset-2.text-center.fh5co-heading.animate-box
-            span Our Special Events
-            h2 Wedding Events
+            span Mi graduación y juramento
+            h2 Eventos
         .row
           .display-t
             .display-tc
               .col-md-10.col-md-offset-1
                 .col-md-6.col-sm-6.text-center
                   .event-wrap.animate-box
-                    h3 Main Ceremony
+                    h3 Facultad Tecnología
                     .event-col
                       i.icon-clock
-                      span 4:00 PM
-                      span 6:00 PM
+                      span Por Confirmar [AM/PM]
+                      // span ... [AM/PM]
                     .event-col
                       i.icon-calendar
-                      span Monday 28
-                      span November, 2016
-                    p Far far away, behind the word mountains...
+                      span Viernes 04
+                      span Octubre, 2024
+                    p Salón grande.
                 .col-md-6.col-sm-6.text-center
                   .event-wrap.animate-box
-                    h3 Wedding Party
+                    h3 Cena
                     .event-col
                       i.icon-clock
-                      span 7:00 PM
-                      span 12:00 AM
+                      span 8:00 PM
+                      span ... AM
                     .event-col
                       i.icon-calendar
-                      span Monday 28
-                      span November, 2016
-                    p Far far away, behind the word mountains...
+                      span Viernes 04
+                      span Octubre, 2024
+                    p "Restaurante ..." Ubicado...
 
-    #fh5co-couple-story
+    #fh5co-couple.fh5co-section-gray
       .container
-        .row
-          .col-md-8.col-md-offset-2.text-center.fh5co-heading.animate-box
-            span We Love Each Other
-            h2 Our Story
-            p Far far away, behind the word mountains...
-        .row
-          .col-md-12.col-md-offset-0
-            ul.timeline.animate-box
-              li.animate-box
-                .timeline-badge(style="background-image:url(images/couple-1.jpg);")
-                .timeline-panel
-                  .timeline-heading
-                    h3.timeline-title First We Meet
-                    span.date December 25, 2015
-                  .timeline-body
-                    p Far far away...
-              li.timeline-inverted.animate-box
-                .timeline-badge(style="background-image:url(images/couple-2.jpg);")
-                .timeline-panel
-                  .timeline-heading
-                    h3.timeline-title First Date
-                    span.date December 28, 2015
-                  .timeline-body
-                    p Far far away...
-              li.animate-box
-                .timeline-badge(style="background-image:url(images/couple-3.jpg);")
-                .timeline-panel
-                  .timeline-heading
-                    h3.timeline-title In A Relationship
-                    span.date January 1, 2016
-                  .timeline-body
-                    p Far far away...
+        .row.animate-box
+          .col-md-8.col-md-offset-2.text-center.fh5co-heading
+            h2 Confirmar Asistencia
+            p Por favor complete su nombre completo para notificarme que asistirá, gracias.
+        .row.animate-box
+          .col-md-10.col-md-offset-1
+            form#invitationForm.form-inline
+              .col-md-4.col-sm-4
+                .form-group
+                  label(for="name") Nombre
+                  input.form-control(type="name" id="name" placeholder="Nombre y Apellido" required)
+              .col-md-4.col-sm-4
+                .form-group(style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px;")
+                  label(for="withPartner") ¿Aistirá con pareja?
+                  input.form-control(type="checkbox" id="withPartner" name="withPartner" style="width: 30px; height: 30px;")
+              .col-md-4.col-sm-4
+                button.btn.btn-primary.btn-block(type="submit") Confirmar Asistencia
+        .row.animate-box
+          .col-md-12(style="text-align: center; margin-top: 40px;")
+            p#response(style="color: green;")
 
-    #fh5co-gallery.fh5co-section-gray
+    // #map.fh5co-map
+
+    footer#fh5co-footer(role="contentinfo")
       .container
-        .row
-          .col-md-8.col-md-offset-2.text-center.fh5co-heading.animate-box
-            span Our Memories
-            h2 Wedding Gallery
-            p Far far away...
-        .row.row-bottom-padded-md
-          .col-md-12
-            ul#fh5co-gallery-list
-              li.one-third.animate-box(data-animate-effect="fadeIn", style="background-image:url(images/gallery-1.jpg);")
-                a(href="images/gallery-1.jpg")
-                  .case-studies-summary
-                    span 14 Photos
-                    h2 Two Glas of Juice
-              li.one-third.animate-box(data-animate-effect="fadeIn", style="background-image:url(images/gallery-2.jpg);")
-                a.color-2(href="#")
-                  .case-studies-summary
-                    span 30 Photos
-                    h2 Timer starts now!
-              li.one-third.animate-box(data-animate-effect="fadeIn", style="background-image:url(images/gallery-3.jpg);")
-                a.color-3(href="#")
-                  .case-studies-summary
-                    span 90 Photos
-                    h2 Beautiful sunset
-
-  .container(style="flex: 1; padding: 50px 0;")
-    h1 My Home Page
-    form#invitationForm
-      label(for="name") Nombre Completo
-      input(type="text" name="name" id="name" required)
-
-      br
-
-      label(for="withPartner") Asistirá con pareja
-      input(type="checkbox" name="withPartner" id="withPartner")
-
-      br
-
-      button(type="submit") Confirmar Asistencia
-
-    p#response(style="color: green;")
+        .row.copyright
+          .col-md-12.text-center
+            p
+              small.block &copy; 2024 Todos los derechos reservados.
+              small.block
+                | Desarrollado por Gary Guzman
+                a(href="https://garydav.com" target="_blank")  garydav.com
+            p
+              ul.fh5co-social-icons
+                li
+                  a(href="https://x.com/_garyDav" target="_blank")
+                    i.icon-twitter
+                li
+                  a(href="https://www.facebook.com/garydavid.guzmanmunoz/" target="_blank")
+                    i.icon-facebook
+                li
+                  a(href="https://www.linkedin.com/in/garydav/" target="_blank")
+                    i.icon-linkedin
