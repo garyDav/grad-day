@@ -35,7 +35,13 @@ app.set('views', join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
 // Security
-const whitelist: string[] = ['http://localhost:3000', 'http://localhost:4000']
+const whitelist: string[] = [
+  'http://localhost:3000',
+  'http://localhost:4000',
+  'https://localhost:4000',
+  'http://216.238.80.194:4000',
+  'https://216.238.80.194:4000',
+]
 const options: cors.CorsOptions = {
   exposedHeaders: 'Authorization, Content-Disposition',
   origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
