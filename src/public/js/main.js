@@ -197,14 +197,18 @@
 
   // const d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000)
   // const d = new Date(2024, 9, 4)
-  // const d = new Date(Date.UTC(2024, 9, 4, 16, 45))
-  const d = new Date(Date.UTC(2024, 9, 4, 16, 45) + 9 * 60 * 60 * 1000)
+  const d = new Date(Date.UTC(2024, 9, 4, 16, 45))
+  // const d = new Date(new Date(2024, 9, 4).getTime() + 12 * 60 * 60 * 1000)
 
   // default example
   simplyCountdown('.simply-countdown-one', {
     year: d.getFullYear(),
     month: d.getMonth() + 1,
     day: d.getDate(),
+    hours: d.getHours(),
+    minutes: d.getMinutes(),
+    seconds: d.getSeconds(),
+    enableUtc: true,
   })
 
   // jQuery example
